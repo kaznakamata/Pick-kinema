@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+form{
+  height: 450px;
+  width: 300px;
+}
+
+#main__center__poster__left__form__tmdb_id{
+  opacity: 0;
+  padding: 200px 0;
+}
+
+#poster_left_btn{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+}
+
+.main__center__poster__left__form{
+  position: relative;
+  width: 80%;
+  height: 70%;
+}
+.main__center__poster__left__form img{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#submit_left{
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor        : pointer;     /* カーソル   */
+  padding       : 210px 110px;   /* 余白       */
+  border        : 2px solid #000066;    /* 枠の指定 */
+  opacity: 0.5;
+}
+#submit_en{
+  border: 2px solid white;
+}
+
+.main{
+  background-image: url("top.jpg");
+  height: 100vh;
+  background-size: cover;
+  &__center{
+    padding: 100px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    &__poster{
+      &__btn{
+        color: black;
+        border: 1px solid white;
+        font-size: 1.5em;
+        height: 50px;
+        width: 200px;
+        text-align: center;
+        line-height: 50px;
+        margin: 200px auto;
+        cursor: pointer;
+        background-color: lightgray;
+        border-radius: 7px;
+      }
+      &__ja{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        &__form{
+          width: 300px;
+          height: 450px;
+        }
+        &__image{
+          width: 300px;
+          height: 440px;
+          cursor: pointer;
+          text-align: center;
+        }
+        &__name{
+          font-size: 1em;
+          width: 100%;
+          color: white;
+          font-family: 'Solway', serif;
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
+      &__en{
+        position: relative;
+        &__image{
+          width: 300px;
+          height: 440px;
+          cursor: pointer;
+          text-align: center;
+        }
+        &__name{
+          font-size: 1em;
+          width: 100%;
+          color: white;
+          font-family: 'Solway', serif;
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
