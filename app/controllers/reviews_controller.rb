@@ -5,7 +5,6 @@ class ReviewsController < ApplicationController
   end
   def create
     Review.create(review_params)
-    binding.pry
     redirect_to root_path
   end
 
