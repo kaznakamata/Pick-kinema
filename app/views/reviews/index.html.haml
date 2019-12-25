@@ -21,6 +21,30 @@
     .main__center__poster__btn
       = "Pick kinema!"
 
+
+    .main__center__poster__right
+      -# .main__center__poster__ja__image{ id: "poster_ja" } これあとで戻すかも
+        -# = image_tag src=""
+      .main__center__poster__right__name
+      .main__center__poster__right__form
+        =form_with url: reviews_path, method: :POST, model: Review.new, local: true do |form|  
+          =form.text_field :tmdb_id, id: "main__center__poster__right__form__tmdb_id"  #invisibleにする。
+          =form.text_field :body, id: "main__center__poster__right__form__review"  #invisibleにする。
+          =form.submit "to_submit", id: "submit_right" #invisibleにする。submitはposterに被らせて、opacity０→クリックでvalueを保存の流れにする。
+          -# =image_tag src="", id: "poster_left_btn"
+    .main__center__poster__right__review
+
+
+
+
+
+
+
+
+
+
+
+
 -#     .main__center__poster__en
 -#       .main__center__poster__en__image{ id: "poster_en" }
 -#         = image_tag src=""
