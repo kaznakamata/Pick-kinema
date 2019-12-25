@@ -5,17 +5,17 @@
   .main__left
   .main__center
 
-    .main__center__poster__ja
+    .main__center__poster__left
       -# .main__center__poster__ja__image{ id: "poster_ja" } これあとで戻すかも
         -# = image_tag src=""
-      .main__center__poster__ja__name
-      .main__center__poster__ja__form
+      .main__center__poster__left__name
+      .main__center__poster__left__form
         =form_with url: reviews_path, method: :create, model: @review, local: true do |form|  
-          =form.text_field :mtdb_id, value: "", id: "main__center__poster__ja__form__mtdb_id"  #invisibleにする。
-          =form.text_field :body, value: "", id: "main__center__poster__ja__form__review"  #invisibleにする。
-          =form.submit "to_submit", id: "submit_ja" #invisibleにする。submitはposterに被らせて、opacity０→クリックでvalueを保存の流れにする。
-          =image_tag src="", id: "poster_ja_btn"
-    .main__center__poster__ja__review
+          =form.text_field :mtdb_id, value: "", id: "main__center__poster__left__form__tmdb_id"  #invisibleにする。
+          =form.text_field :body, id: "main__center__poster__left__form__review"  #invisibleにする。
+          =form.submit "to_submit", id: "submit_left" #invisibleにする。submitはposterに被らせて、opacity０→クリックでvalueを保存の流れにする。
+          =image_tag src="", id: "poster_left_btn"
+    .main__center__poster__left__review
 
 
     .main__center__poster__btn
