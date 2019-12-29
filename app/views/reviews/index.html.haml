@@ -1,57 +1,55 @@
 .head
-.nav
+.nav_bar
 
 .main
-  .main__left
   .main__center
 
     .main__center__poster__left
       -# .main__center__poster__ja__image{ id: "poster_ja" } これあとで戻すかも
         -# = image_tag src=""
+      =image_tag src=""
       .main__center__poster__left__name
-      .main__center__poster__left__form
-        =form_with url: reviews_path, method: :POST, model: Review.new, local: true do |form|  
-          =form.text_field :tmdb_id, id: "main__center__poster__left__form__tmdb_id"  #invisibleにする。
-          =form.text_field :body, id: "main__center__poster__left__form__review"  #invisibleにする。
-          =form.submit "to_submit", id: "submit_left" #invisibleにする。submitはposterに被らせて、opacity０→クリックでvalueを保存の流れにする。
-          -# =image_tag src="", id: "poster_left_btn"
-    .main__center__poster__left__review
-
-
+      -# .main__center__poster__left__form
+      -#   =form_with url: reviews_path, method: :POST, model: Review.new, local: true do |form|  
+      -#     =form.text_field :tmdb_id, id: "main__center__poster__left__form__tmdb_id"  #invisibleにする。
+      -#     =form.text_field :body, id: "main__center__poster__left__form__review"  #invisibleにする。
+      -#     =form.submit "to_submit", id: "submit_left" #invisibleにする。submitはposterに被らせて、opacity０→クリックでvalueを保存の流れにする。
+      -#     -# =image_tag src="", id: "poster_left_btn"
+    
     .main__center__poster__btn
-      = "Pick kinema!"
+      .box-3
+        .btn.btn-three
+          %span
+            Pickinema!!
+    
+    .main__center__poster__left__info
+      .main__center__poster__left__info-title
+      .main__center__poster__left__info-releasedate
+      .main__center__poster__left__info-overview
+
+    .main__center__poster__left__review
+      =form_with url: reviews_path, method: :POST, model: Review.new, local: true do |form|  
+        =form.text_field :tmdb_id, id: "main__center__poster__left__form__tmdb_id", placeholder: "mtdb_id"  #invisibleにする。
+        =form.text_field :body, id: "main__center__poster__left__form__review", placeholder: "Write your review"  #invisibleにする。
+        =form.submit "SEND", id: "submit_left" #invisibleにする。submitはposterに被らせて、opacity０→クリックでvalueを保存の流れにする。
 
 
-    .main__center__poster__right
-      -# .main__center__poster__ja__image{ id: "poster_ja" } これあとで戻すかも
-        -# = image_tag src=""
-      .main__center__poster__right__name
-      .main__center__poster__right__form
-        =form_with url: reviews_path, method: :POST, model: Review.new, local: true do |form|  
-          =form.text_field :tmdb_id, id: "main__center__poster__right__form__tmdb_id"  #invisibleにする。
-          =form.text_field :body, id: "main__center__poster__right__form__review"  #invisibleにする。
-          =form.submit "to_submit", id: "submit_right" #invisibleにする。submitはposterに被らせて、opacity０→クリックでvalueを保存の流れにする。
-          -# =image_tag src="", id: "poster_left_btn"
-    .main__center__poster__right__review
+    -# .main__center_poster__right
+    -#   .main__center__poster__right__form__of_left
+    -#     =form_with url: reviews_path, method: :POST, model: Review.new, local: true do |form|  
+    -#       =form.text_field :tmdb_id, id: "main__center__poster__left__form__tmdb_id"  #invisibleにする。
+    -#       =form.text_field :body, id: "main__center__poster__left__form__review"  #invisibleにする。
+    -#       =form.submit "to_submit", id: "submit_left" #invisibleにする。submitはposterに被らせて、opacity０→クリックでvalueを保存の流れにする。
+    -#       -# =image_tag src="", id: "poster_left_btn"
 
-
-
-
-
-
-
-
-
-
-
-
--#     .main__center__poster__en
--#       .main__center__poster__en__image{ id: "poster_en" }
--#         = image_tag src=""
--#       .main__center__poster__en__name
--#       .main__center__poster__en__form
--#         =form_with url: reviews_path, method: :create, model: @review, local: true do |form|  
--#           =form.text_field :mtdb_id, value: "", id: "main__center__poster__en__form__mtdb_id"  #invisibleにする。
--#           =form.submit "to_review", id: "submit_en"     #invisibleにする。submitはposterに被らせて、opacity０→クリックでvalueを保存の流れにする。
--#   .main__right
--# .bottom
+    -# .main__center__poster__right
+    -#   -# .main__center__poster__ja__image{ id: "poster_ja" } これあとで戻すかも
+    -#     -# = image_tag src=""
+    -#   .main__center__poster__right__name
+    -#   .main__center__poster__right__form
+    -#     =form_with url: reviews_path, method: :POST, model: Review.new, local: true do |form|  
+    -#       =form.text_field :tmdb_id, id: "main__center__poster__right__form__tmdb_id"  #invisibleにする。
+    -#       =form.text_field :body, id: "main__center__poster__right__form__review"  #invisibleにする。
+    -#       =form.submit "to_submit", id: "submit_right" #invisibleにする。submitはposterに被らせて、opacity０→クリックでvalueを保存の流れにする。
+    -#       -# =image_tag src="", id: "poster_left_btn"
+    -# .main__center__poster__right__review
