@@ -17,16 +17,23 @@ $(function(){
         $(".main__center__poster__left__info-title").empty().append(data.results[randomResult].title);
         var pos = "https://image.tmdb.org/t/p/w300/xxxxxx"
         var pospos = pos.replace(/xxxxxx/, data.results[randomResult].poster_path);
-        $("#poster_left img").attr({src: pospos, id: data.results[randomResult].id});
+        $("img").attr({src: pospos, id: data.results[randomResult].id});
         $("#main__center__poster__left__form__tmdb_id").attr({value: data.results[randomResult].id});
-        $(".main__center__poster__left__info-releasedate").attr({value: data.results[randomResult].release_date});
-        $("#main__center__poster__left__form-overview").attr({value: data.results[randomResult].overview});
+        $(".main__center__poster__left__info-releasedate").empty().append(data.results[randomResult].release_date);
+        $("#main__center__poster__left__form-overview").empty().append(data.results[randomResult].overview);
       })
       .catch(error => {
       });
     }
 
+    function formAppear(){
+      $("form").css({opacity: 0.6});
+    }
+
     movieRandom();
+    formAppear();
+    
+
   });
 })
   // .main__center__poster__left__info-title

@@ -2,18 +2,35 @@
   box-sizing: border-box;
 }
 
+textarea {
+  resize: horizontal;
+}
+
 form{
-  height: 450px;
+  height: 250px;
   width: 300px;
+  opacity: 0;
+}
+
+.btn{
+  margin: 0 auto;
+}
+
+#firstword{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: white;
+  font-size: 1em;
 }
 
 #main__center__poster__left__form__tmdb_id{
-  // opacity: 0;
+  opacity: 0;
 }
 #main__center__poster__left__form__review{
-  width: 100%;
-  height: 15%;
-  margin-top: 40vh;
+  width: 30%;
+  height: 10%;
+  margin-top: 45vh;
+  position: absolute;
+  right: 3.5%;
 }
 
 #poster_left_btn{
@@ -25,8 +42,6 @@ form{
 
 .main__center__poster__left__form{
   position: relative;
-  width: 80%;
-  height: 70%;
 }
 .main__center__poster__left__form img{
   position: absolute;
@@ -37,12 +52,12 @@ form{
 #submit_left{
   position: absolute;
   display: inline-block;
-  bottom: 20%;
-  right: 10%;
+  top: 60%;
+  right: 3.5%;
   z-index: 1;
   cursor        : pointer;
   border        : 2px solid #000066;
-  opacity: 0.5;
+  font-family: 'PT Sans', sans-serif;
 }
 #submit_right{
   border: 2px solid white;
@@ -58,32 +73,39 @@ form{
     display: flex;
     justify-content: space-around;
     &__poster{
+      &__firstword{
+        float: right;
+      }
       &__btn{
-        padding: 45vh 0;
-        height: 1.2em;
+        padding-top: 40vh;
+        height: 2em;
+        font-size: 1.5em;
+        font-family: 'PT Sans', sans-serif;
+        width: 312px;
       }
       &__left{
         position: relative;
-        height: 100%;
-        width: 30%;
-        border: 1px solid black;
+        height: 450px;
+        width: 300px;
+        top: 15%;
         &__info{
-          border: 1px solid black;
+          font-family: 'PT Sans', sans-serif;
           height: 15vh;
           width: 35%;
           position: absolute;
-          right: 10%;
+          right: 5%;
           top: 25%;
+          text-align: right;
           &-title{
-            font-size: 2em;
+            font-size: 1.5em;
           }
 
         }
         &__review{
         }
         &__form{
-          width: 300px;
-          height: 450px;
+          width: 100%;
+          height: 400px;
         }
         &__image{
           width: 300px;
@@ -122,24 +144,14 @@ form{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 // btn action animation
 .btn-three {
 	color: #FFF;
 	transition: all 0.5s;
   position: relative;
-  width: 150px;
-  line-height: 1.5em;
+  width: 230px;
+  height: 2.5em;
+  line-height: 2.5em;
   text-align: center;
   cursor: pointer;
 }
