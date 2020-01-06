@@ -30,11 +30,24 @@ $(function(){
       $("form").css({opacity: 0.6});
     }
 
+
+    // function startSearch(){
+    //   $("img").mouseover(funciton(){
+    //     console.log("マウスオーバーで発火したよ！");
+    //   })
+    // }
+
     movieRandom();
     formAppear();
-    
+    // startSearch();
 
   });
+})
+
+$(window).load(function(){
+  $("img").hover(function(){
+    console.log("hover発火成功")
+  })
 })
   // .main__center__poster__left__info-title
   // .main__center__poster__left__info-releasedate

@@ -7,6 +7,8 @@
 
     .main__center__poster__left
       =image_tag src=""
+      =form_with url: search_reviews_path, method: :GET, local: true do |form|
+        =form.text_field :keyword, class: "search-reviews"
       .main__center__poster__left__name
 
     .main__center__poster__btn
