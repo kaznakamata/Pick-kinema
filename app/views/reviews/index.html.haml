@@ -4,12 +4,14 @@
 
 .main
   .main__center
-
     .main__center__poster__left
+      .main__center__poster__left__writedreview
       =image_tag src=""
-      =form_with url: search_reviews_path, method: :GET, local: true do |form|
+      -# =form_with url: "/reviews/search", method: :GET, local: true do |form|
+      =form_with url: "/reviews/search", id: "search-engine", method: :GET, local: true do |form|
         =form.text_field :keyword, class: "search-reviews"
-      .main__center__poster__left__name
+        =form.submit "SEARCH", id: "search-btn"
+    -# .main__center__poster__left__review
 
     .main__center__poster__btn
       #firstword
@@ -25,7 +27,7 @@
       .main__center__poster__left__info-overview
 
     .main__center__poster__left__review
-      =form_with url: reviews_path, method: :POST, model: Review.new, local: true do |form|  
+      =form_with url: reviews_path, id: "review-body", method: :POST, model: Review.new, local: true do |form|  
         =form.text_field :tmdb_id, id: "main__center__poster__left__form__tmdb_id", placeholder: "mtdb_id"
         =form.text_area :body, id: "main__center__poster__left__form__review", placeholder: "Write your review"
         =form.submit "SEND", id: "submit_left" 

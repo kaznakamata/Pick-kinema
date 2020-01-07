@@ -3,18 +3,25 @@
 }
 
 textarea {
-  resize: horizontal;
+  resize: none;
 }
 
 .search_reviews{
   height: 2em;
-
 }
-// form{
-//   height: 250px;
-//   width: 300px;
-//   opacity: 0;
+
+.search-engine{
+  opacity: 0;
+}
+// .review-body{
+//   opacity: 1;
 // }
+
+form{
+  height: 100px;
+  width: 300px;
+  opacity: 0;
+}
 
 .btn{
   margin: 0 auto;
@@ -51,6 +58,7 @@ textarea {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 0;
 }
 
 #submit_left{
@@ -76,6 +84,16 @@ textarea {
     height: 100vh;
     display: flex;
     justify-content: space-around;
+    position: relative;
+    // &__review{
+    //   width: 300px;
+    //   height: 450px;
+    //   border: 1px solid black;
+    //   position: absolute;
+    //   top: 125px;
+    //   left: 65px;
+    //   margin: 0;
+    // }
     &__poster{
       &__firstword{
         float: right;
@@ -93,6 +111,17 @@ textarea {
         width: 300px;
         top: 15%;
         cursor: pointer;
+        &__writedreview{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 300px;
+          height: 450px;
+          z-index: 1;
+          font-family: 'M PLUS Rounded 1c', sans-serif;
+          color: white;
+          font-size: 1em;
+        }
         &__info{
           font-family: 'PT Sans', sans-serif;
           height: 15vh;
@@ -107,6 +136,9 @@ textarea {
 
         }
         // &__review{
+          // position: absolute;
+          // top: 0;
+          // left: 0;
         // }
         &__form{
           width: 100%;
@@ -191,4 +223,26 @@ textarea {
 .btn-three:hover::after {
 	opacity: 1;
 	transform: scale(1,1);
+}
+
+
+// ここから下がpush
+
+// .btn-three {
+//   display: inline-block;
+//   max-width: 180px;
+//   text-align: left;
+//   background-color: #ffa300;
+//   font-size: 16px;
+//   color: #FFF;
+//   text-decoration: none;
+//   font-weight: bold;
+//   padding: 10px 24px;
+//   border-radius: 4px;
+//   border-bottom: 4px solid #d37800;
+// }
+
+.btn-three:active {
+    transform: scale(0.9);
+    border-bottom: none;
 }

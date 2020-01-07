@@ -1,10 +1,11 @@
 class ReviewsController < ApplicationController
   def index
-    respond_to do|format|
+    respond_to do |format|
       format.html
       format.json
     end
   end
+
   def new
   end
   def create
@@ -13,7 +14,11 @@ class ReviewsController < ApplicationController
   end
 
   def search
-    @reviews = Tweet.search(params[:keyword])
+    @reviews = Review.search(params[:keyword])
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   private
